@@ -434,13 +434,10 @@ header{
 ==================================================*/
 
 .skills-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-
-    gap:25px;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 180px));
+    justify-content: center;
+    gap: 30px;
 }
 
 .skill-card{
