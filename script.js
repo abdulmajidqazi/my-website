@@ -24,7 +24,7 @@ const typing = document.getElementById("typing");
 
 const words = [
 
-    "BAI Student",
+    "BS AI Student",
 
     "Python Developer",
 
