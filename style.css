@@ -667,88 +667,67 @@ header{
     CERTIFICATES
 ==================================================*/
 
-.certificate-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-    gap:30px;
-
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
 }
 
-.certificate-card{
+.certificate-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
 
-    background:var(--card);
-
-    border:1px solid var(--border);
-
-    border-radius:var(--radius);
-
-    overflow:hidden;
-
-    box-shadow:var(--shadow);
-
-    transition:var(--transition);
-
+    /* Makes all card content align properly */
+    display: flex;
+    flex-direction: column;
 }
 
-.certificate-card:hover{
-
-    transform:translateY(-8px);
-
-    border-color:var(--primary);
-
+.certificate-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
 }
 
-.certificate-card img{
-
-    width:100%;
-
-    height:220px;
-
-    object-fit:cover;
-
+.certificate-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
-.certificate-content{
+.certificate-content {
+    padding: 25px;
 
-    padding:25px;
-
+    /* Allows buttons to stay at the bottom */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
-.certificate-content h3{
-
-    margin-bottom:10px;
-
+.certificate-content h3 {
+    margin-bottom: 10px;
 }
 
-.certificate-content p{
-
-    color:var(--gray);
-
+.certificate-content p {
+    color: var(--gray);
 }
 
-.certificate-content span{
-
-    display:block;
-
-    margin:15px 0;
-
-    color:var(--primary);
-
-    font-weight:600;
-
+.certificate-content span {
+    display: block;
+    margin: 15px 0;
+    color: var(--primary);
+    font-weight: 600;
 }
 
-.certificate-buttons{
+.certificate-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 
-    display:flex;
-
-    gap:15px;
-
-    flex-wrap:wrap;
-
+    /* Pushes buttons to the bottom of every card */
+    margin-top: auto;
 }
 
 /*==================================================
