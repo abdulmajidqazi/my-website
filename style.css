@@ -40,6 +40,33 @@ html{
 }
 
 /*==================================================
+    LIGHT MODE
+==================================================*/
+
+body.light-mode{
+
+    --background:#f8fafc;
+
+    --background2:#e2e8f0;
+
+    --card:#ffffff;
+
+    --primary:#0891b2;
+
+    --primary-hover:#06b6d4;
+
+    --white:#0f172a;
+
+    --gray:#475569;
+
+    --border:rgba(15,23,42,.10);
+
+    --shadow:0 10px 30px rgba(15,23,42,.12);
+
+}
+
+
+/*==================================================
     BODY
 ==================================================*/
 
@@ -181,11 +208,12 @@ header{
 
     backdrop-filter:blur(18px);
 
-    background:rgba(15,23,42,.65);
+    background:var(--card);
 
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--border);
 
 }
+
 
 .logo{
 
@@ -1153,3 +1181,48 @@ footer p{
     transform:scale(1.12);
 
 }
+
+
+/*==================================================
+    THEME TOGGLE
+==================================================*/
+
+.theme-toggle{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:transparent;
+
+    color:var(--white);
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:var(--transition);
+
+}
+
+.theme-toggle:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+    transform:rotate(20deg);
+
+}
+
+
