@@ -211,11 +211,12 @@ header{
 
     backdrop-filter:blur(18px);
 
-    background:rgba(15,23,42,.65);
+    background:var(--nav-background);
 
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--border);
 
 }
+
 
 .logo{
 
@@ -260,6 +261,57 @@ header{
     cursor:pointer;
 
 }
+
+/*==================================================
+    THEME TOGGLE
+==================================================*/
+
+.theme-toggle{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    border:1px solid var(--border);
+
+    background:transparent;
+
+    color:var(--white);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    transition:var(--transition);
+
+    margin-left:25px;
+
+}
+
+.theme-toggle:hover{
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+    transform:rotate(20deg) scale(1.08);
+
+}
+
+.theme-toggle i{
+
+    transition:transform .3s ease;
+
+}
+
 
 /*==================================================
     HERO
