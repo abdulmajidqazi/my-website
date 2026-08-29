@@ -254,3 +254,57 @@ window.addEventListener("scroll", () => {
     });
 
 });
+
+
+/*=========================================
+    DARK / LIGHT MODE
+=========================================*/
+
+const themeToggle = document.getElementById("theme-toggle");
+
+const themeIcon = themeToggle.querySelector("i");
+
+// Check saved theme
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "light") {
+
+    document.body.classList.add("light-mode");
+
+    themeIcon.classList.remove("fa-sun");
+
+    themeIcon.classList.add("fa-moon");
+
+}
+
+
+// Toggle theme
+themeToggle.addEventListener("click", () => {
+
+    document.body.classList.toggle("light-mode");
+
+    const isLightMode =
+        document.body.classList.contains("light-mode");
+
+
+    if (isLightMode) {
+
+        themeIcon.classList.remove("fa-sun");
+
+        themeIcon.classList.add("fa-moon");
+
+        localStorage.setItem("theme", "light");
+
+    }
+
+    else {
+
+        themeIcon.classList.remove("fa-moon");
+
+        themeIcon.classList.add("fa-sun");
+
+        localStorage.setItem("theme", "dark");
+
+    }
+
+});
