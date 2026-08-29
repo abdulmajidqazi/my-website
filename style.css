@@ -14,8 +14,6 @@ html{
 
 :root{
 
-    /* Colors */
-
     --background:#0f172a;
     --background2:#1e293b;
 
@@ -37,7 +35,10 @@ html{
 
     --transition:.35s ease;
 
+    /* Theme */
+    --nav-background:rgba(15,23,42,.65);
 }
+
 
 /*==================================================
     BODY
